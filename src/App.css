@@ -61,10 +61,25 @@ section h2 {
     transform: scale(1.05);
 }
 
+.btn-nav {
+    padding: 0px 20px;
+}
+
 .btn-container{
     margin: 20px 0px;
     padding: 20px;
     text-align: center;
+}
+
+.loading-container {
+    position: relative;
+}
+
+.loading-container .loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Register STARTS */

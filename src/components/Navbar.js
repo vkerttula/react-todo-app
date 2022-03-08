@@ -1,7 +1,22 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, { useContext } from 'react'
+import {Link, Navigate} from 'react-router-dom'
+import { auth } from '../Firebase'
+import { signOut } from 'firebase/auth'
+import { AuthContext } from '../contex/auth'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+
+  let navigate = useNavigate();
+
+  const { user } = useContext(AuthContext);
+
+  const handleSignOut = async () => {
+    await signOut(auth);
+    navigate("/login");
+    console.log("Logged out");
+  }
+
   return (
     <nav>
         <div className='logo'>
@@ -10,7 +25,15 @@ const Navbar = () => {
             </h2>
         </div>
         <div className='nav-buttons'>
-            <Link to="/register" className='btn-nav'>Save!</Link>
+          {user ? 
+          <>
+            <button className='btn' onClick={handleSignOut}>Logout</button>
+          </>  : (
+          <>
+            <Link to="/register" className='btn-nav'>Register</Link>
+            <Link to="/login" className='btn-nav'>Login</Link>
+          </>
+          )}
         </div>
     </nav>
   )

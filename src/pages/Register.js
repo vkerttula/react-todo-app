@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth, db } from '../Firebase'
 import {setDoc, doc} from 'firebase/firestore'
-import { Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
+
+    let navigate = useNavigate();
 
     const [data, setData] = useState({
         name: '',
@@ -43,8 +45,8 @@ const Register = () => {
                     email,
                     createdAt: result.user.metadata.createdAt
                   });
-                setData({name: '', email: '', password: '', password2: '', error: null, loading: false})
-                return <Navigate to="/" />
+                setData({name: '', email: '', password: '', password2: '', error: null, loading: false});
+                navigate("/login"); // Navigate to login
             } catch (err) {
                 setData({ ...data, error: err.message, loading: false });
             }
@@ -75,7 +77,9 @@ const Register = () => {
             {error ? <p className='error-text'>{error}</p> : null}
 
             <div className='btn-container'>
-                <button className='btn' disabled={loading}>Register</button>
+                <button className='btn' disabled={loading}>
+                    {loading ? 'Registering account ...' : 'Register'}
+                </button>
             </div>
         </form>
     </section>
