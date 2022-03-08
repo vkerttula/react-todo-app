@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import {Link, Navigate} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { auth } from '../Firebase'
 import { signOut } from 'firebase/auth'
 import { AuthContext } from '../contex/auth'

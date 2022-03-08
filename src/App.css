@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 * {
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
 :root {
-    --color-1: #0B0C10;
-    --color-2: #1F2833;
-    --color-3: #C5C6C7;
-    --color-4: #66FCF1;
-    --color-5: #45A29E;
+    --color-1: #fff;
+    --color-2: #aaaaaa;
+    --color-3: #6b6b6b;
+    --color-4: #00ff40;
+    --color-5: #db2727;
+    --color-6: #000;
 }
 
 body {
@@ -23,14 +27,14 @@ nav {
 }
 
 a {
-    color: var(--color-4);
+    color: var(--color-6);
     text-decoration: none;
 }
 
 section {
     max-width: 500px;
     margin: 0px auto;
-    box-shadow: 1px 2px 10px var(--color-5);
+    box-shadow: 1px 2px 10px var(--color-3);
     border-radius: 30px;
     padding: 30px 60px;
 }
@@ -48,9 +52,9 @@ section h2 {
 
 .btn {
     padding: 12px 26px;
-    background-color: var(--color-5);
+    background-color: var(--color-3);
     color: var(--color-1);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     border-radius: 6px;
     transition: all .2s ease-in-out; 
@@ -95,3 +99,12 @@ section h2 {
     border-radius: 6px;
 }
 /* Register ENDS */
+
+/* TODO STARTS*/
+.todo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* TODO ENDS*/
