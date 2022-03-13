@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import AuthProvider from './contex/auth';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/' element={<Home/>} />
         </Routes>
+        <Footer />
       </Router>
     </AuthProvider>
   )

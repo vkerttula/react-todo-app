@@ -46,7 +46,7 @@ const Register = () => {
                     createdAt: result.user.metadata.createdAt
                   });
                 setData({name: '', email: '', password: '', password2: '', error: null, loading: false});
-                navigate("/login"); // Navigate to login
+                navigate("/"); 
             } catch (err) {
                 setData({ ...data, error: err.message, loading: false });
             }

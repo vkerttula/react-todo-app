@@ -30,7 +30,6 @@ const Login = () => {
             try {
                 // Login to user
                 const result = await signInWithEmailAndPassword(auth, email, password);
-                console.log(result.user);
                 setData({ email: '', password: '', error: null, loading: false});
                 navigate("/"); // Navigate to home
             } catch (err) {
@@ -53,6 +52,7 @@ const Login = () => {
             </div>
 
             {error ? <p className='error-text'>{error}</p> : null}
+
 
             <div className='btn-container'>
                 <button className='btn' disabled={loading}>
