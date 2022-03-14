@@ -20,7 +20,14 @@ const Home = () => {
     if(user) {
       getTodo();
     }
-  }, [user, offlineTodo, updateStatus]);
+    else {
+      setOfflineTodo(offlineTodo => [...offlineTodo,  {
+        id: serverTimestamp() + todoInput,
+        progress: false,
+        todo: "This is sample task. Enjoy!"
+      }]);
+    }
+  }, [user, updateStatus]);
 
   const getTodo = async() => {
     const querySnapshot = await getDocs(collection(db, "TODOs", user.uid, "todo"));
@@ -31,6 +38,7 @@ const Home = () => {
         todo: doc.data().todo
       }))
     );
+    console.log("Getting todos...");
   };
 
   const addTodo = async e => {
@@ -42,7 +50,7 @@ const Home = () => {
             progress: true,
             todo: todoInput
           });
-          setOfflineTodo(todoInput);
+          setUpdateStatus(Date.now());
       }
       else {
         setOfflineTodo(offlineTodo => [...offlineTodo,  {
