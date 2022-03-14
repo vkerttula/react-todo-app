@@ -19,17 +19,17 @@ User is apply to mark task as done, delete tasks and add new tasks. Everything s
 Keep in mind that this project was done by learning purposes. It was my first time of using Google Firebase.
 
 ## Pictures
-<img src="https://ibb.co/J2spBt8" alt="2" border="0"><br>
+<img src="https://i.ibb.co/BjC6z3v/1.png" alt="2" border="0"><br>
 Landing page
 
-<img src="https://ibb.co/X2XZvXJ" alt="2" border="0"><br>
+<img src="https://i.ibb.co/Qb9F19m/2.png" alt="2" border="0"><br>
 Register page
 
-<img src="https://ibb.co/Sn0fq9X" alt="3" border="0"><br>
+<img src="https://i.ibb.co/VSDwXPW/3.png" alt="3" border="0"><br>
 App when logged in
 
-<img src="https://ibb.co/Q90j6C1" alt="3" border="0"><br>
+<img src="https://i.ibb.co/nrp8Dn5/4.png" alt="3" border="0"><br>
 Adding new tasks when logged in
 
-<img src="https://ibb.co/7VdLzHp" alt="4" border="0"><br>
+<img src="https://i.ibb.co/0ZRvXk9/5.png" alt="4" border="0"><br>
 Login page
