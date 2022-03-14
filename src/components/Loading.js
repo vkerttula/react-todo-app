@@ -3,7 +3,7 @@ import React from 'react'
 
 const Loading = () => {
   return (
-      <div className='loading-container'>
+      <div data-testid='loading' className='loading-container'>
           <CircularProgress className='loading' />
       </div>
   )

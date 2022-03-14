@@ -25,7 +25,7 @@ const Navbar = () => {
                 <Link to="/">TODO</Link>
             </h2>
         </div>
-        <div className='nav-buttons'>
+        <div data-testid='nav-buttons' className='nav-buttons'>
           {user ? 
           <>
             <p>Hello {user.email}!</p>

@@ -64,7 +64,7 @@ const Home = () => {
   }
 
   return (
-    <div className='app'>
+    <div data-testid='todo-app-container' className='app'>
       {user ? 
           <>
             <p className='info'>
