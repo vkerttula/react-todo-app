@@ -80,12 +80,13 @@ const Home = () => {
           </>
         )}
       <div className='todo-container'>
-        <form>
+        <form onSubmit={e => { e.preventDefault(); }}>
         <Grid container>
           <Grid item>
             <TextField className='todo-input' 
               label="Write Todo..." 
               value={todoInput}
+              variant="filled"
               onChange={(e) => setTodoInput(e.target.value)}
             />
           </Grid>
